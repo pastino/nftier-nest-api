@@ -50,7 +50,7 @@ import { WatchWalletModule } from './watchWallets/watchWallets.module';
       username: process.env.DB_USERNAME,
       password: process.env.DB_PASSWORD,
       database: process.env.DB_NAME,
-      synchronize: true,
+      synchronize: false,
       //process.env.NODE_ENV !== 'prod',
       logging:
         process.env.NODE_ENV !== 'prod' &&

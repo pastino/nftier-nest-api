@@ -171,6 +171,14 @@ export class NftSuccessfulEventEntity extends BaseTimeEntity {
   eventTimestamp: Date;
 
   @ApiProperty({
+    type: Number,
+    example: 123123123,
+    description: '',
+  })
+  @Column({ type: 'bigint' })
+  eventTimestampNumber: number;
+
+  @ApiProperty({
     type: Date,
     example: '2022-12-18T01:10:50.010+00:00',
     description: '',
@@ -331,4 +339,12 @@ export class NftSuccessfulEventEntity extends BaseTimeEntity {
   })
   @Column()
   isBoughtPriceUpated: boolean;
+
+  @ApiProperty({
+    type: String,
+    example: '',
+    description: '',
+  })
+  @Column()
+  sessionUUID: string;
 }
